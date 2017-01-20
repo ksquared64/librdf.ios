@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <redland.h>
+#import "redland.h"
 
 @interface librdf_iosTests : XCTestCase
 @end
