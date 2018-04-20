@@ -193,7 +193,7 @@ if [ ! -f "config.log" ] ; then # configure
     # echo "MAC platform: $platform" 1>&2
     case "$lib" in
     $RAPTOR)
-      ./configure --prefix="$PREFIX" --with-www=none 1> configure.stdout 2> configure.stderr
+      ./configure --prefix="$PREFIX" --with-www=xml 1> configure.stdout 2> configure.stderr
       ;;
     $RASQAL)
       pkg-config --exists raptor2       || { echo "$$ raptor2 is not installed (needed by ./configure)" && exit 1; }
@@ -263,7 +263,7 @@ if [ ! -f "config.log" ] ; then # configure
     common_opts="--build=$HOST_ARCH-apple-darwin$HOST_DARWIN_VER --host=$HOST_ARCH-apple-darwin --enable-static --disable-shared ac_cv_file__dev_zero=no ac_cv_func_setpgrp_void=yes"
     case "$lib" in
     $RAPTOR)
-      ./configure --prefix="$PREFIX" $common_opts --with-www=none 1> configure.stdout 2> configure.stderr
+      ./configure --prefix="$PREFIX" $common_opts --with-www=xml 1> configure.stdout 2> configure.stderr
       ;;
     $RASQAL)
       pkg-config --exists raptor2       || { echo "$$ raptor2 is not installed (needed by ./configure)" && exit 1; }
